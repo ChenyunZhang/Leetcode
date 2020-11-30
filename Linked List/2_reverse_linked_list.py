@@ -19,3 +19,17 @@ class Solution:
             curr = nex
 
         return prev
+
+#1. create dummy, dummy.next = None
+#2. starting from node.val = 1
+#3. dummy,next, head.next, head = head, dummy.next, head.next
+#4. dummy -> 1 -< NULL
+#5 iteration head = 2, dummy.next = 1
+
+
+
+
+# recursively
+    def reverseList(self, head: ListNode) -> ListNode:
+
+
