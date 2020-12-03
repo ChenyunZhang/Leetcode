@@ -28,6 +28,10 @@ class Solution:
 
 
 
+#1. store the head.next to nex
+#2. break and point the node to the prev
+#3. move prev to the head position, prev = head
+#4. move the head to the nex point, head = nex
 
 # recursively
     def reverseList(self, head: ListNode) -> ListNode:
