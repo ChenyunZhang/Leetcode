@@ -5,22 +5,32 @@
 // maxChar("abcccccccd") === "c"
 // maxChar("apple 1231111") === "1"
 
+// my solution
+// function maxChar(str) {
+//     let map = new Map()
+//     let final=0
+//     let result
+//     for(let char of str){
+//         if(map.has(char)){
+//             map.set(char, (map.get(char))+1)
+//         }else{
+//             map.set(char, 1)
+//         }
+//     }
+//     for(let [key,val] of map){
+//         if(final<val){
+//             final = val
+//             result = key
+//         }
+//     }
+//     return result
+// }
+
+// alternative solution
 function maxChar(str) {
-    let map = new Map()
-    let final=0
-    let result
-    for(let char of str){
-        if(map.has(char)){
-            map.set(char, (map.get(char))+1)
-        }else{
-            map.set(char, 1)
-        }
+    const chars = {}
+    for(let char in str){
+        chars[char] ? chars[char]+1 : 1
     }
-    for(let [key,val] of map){
-        if(final<val){
-            final = val
-            result = key
-        }
+    
     }
-    return result
-}
