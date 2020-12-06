@@ -29,8 +29,11 @@
 // alternative solution
 function maxChar(str) {
     const chars = {}
-    for(let char in str){
-        chars[char] ? chars[char]+1 : 1
+    for(let char of str){
+        console.log(char)
+        chars[char] ? chars[char]+=1 : chars[char]=1
     }
-    
-    }
+    console.log(chars)
+}
+
+maxChar("aba")
