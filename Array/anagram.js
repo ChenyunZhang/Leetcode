@@ -37,12 +37,7 @@
 //     }
 
 function anagrams(stringA, stringB){
-    const cleanA = cleanString(stringA)
-    const cleanB = cleanString(stringB)
-    if(cleanA !== cleanB){
-        return false
-    }
-    return true
+    return cleanA === cleanB
 }
 
 function cleanString(str){
