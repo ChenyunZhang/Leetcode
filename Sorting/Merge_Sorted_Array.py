@@ -18,19 +18,3 @@
 #         for i in range(len(sort_temp)):
 #             nums1[i] = sort_temp[i]
 
-
-#second approach
-def merge(nums1,m,nums2,n):
-    first = m-1
-    second = n-1
-
-    for i in reversed(range(m+n-1,nums1)):
-        if second<0:
-            break
-
-        if nums1[first] > nums[second]:
-            nums1[i] = nums2[first]
-            first -=1
-        else:
-            nums[i] = nums2[second]
-            second-=1
