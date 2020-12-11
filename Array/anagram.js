@@ -36,12 +36,47 @@
 //     return true
 //     }
 
-function anagrams(stringA, stringB){
-    return cleanString(stringA) === cleanString(stringB)
+// function anagrams(stringA, stringB){
+//     return cleanString(stringA) === cleanString(stringB)
+// }
+
+// function cleanString(str){
+//     return str.replace(/\W/g,"").toLowerCase().split("").sort().join('')
+// }
+
+// console.log(anagrams('hello', 'olleh'))
+
+function validAnagram(strA,strB){
+    // add whatever parameters you deem necessary - good luck!
+    // if the length of the two strings are not equal to each other, return false
+    // write a helper function to create two objects, the key will be the letter, value will be the frequency
+    // check if the key in the first string object are all in the second string
+    // check if the value in the first string  object are all in the second string
+    // return false if any of them is not there
+    // otherwise, return false
+        if(strA.length !== strB.length){
+            return false
+        }
+        const objA = stringToObject(strA.toLowerCase())
+        const objB = stringToObject(strB.toLowerCase())
+        for(let item in objA){
+            if(!objB[item]){
+                return false
+            }
+            if( objA[item]!== objB[item]){
+                return false
+            }
+        }
+        return true
+    }
+
+function stringToObject(str){
+    let obj = {}
+    for(let i in str){
+
+        obj[str[i]] ? obj[str[i]]+=1 : obj[str[i]]=1
+    }
+    return obj
 }
 
-function cleanString(str){
-    return str.replace(/\W/g,"").toLowerCase().split("").sort().join('')
-}
-
-console.log(anagrams('hello', 'olleh'))
+    console.log(validAnagram("olleh","hello"))
