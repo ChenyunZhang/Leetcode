@@ -1,0 +1,9 @@
+1. the function accepts a sorted array and a value
+2. create a left pointer at the start of the array,
+and a right pointer at the end of the array
+3. while the left pointer comes before the right poninter:
+    1. create pointer in the middle
+    2. if you find the value you want, return the index
+    3. if the value is too samll, move the left pointer up
+    4. if the value is too large, move the right pointer down
+return -1 if you never find the value
