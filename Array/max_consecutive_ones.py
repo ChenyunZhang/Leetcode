@@ -14,18 +14,20 @@ def findMaxConsecutiveOnes(nums):
     while i<len(nums):
         if nums[i] == 1:
             while nums[i] == 1:
+                print("inner",i)
                 counter+=1
                 result = max(counter,result)
                 if i == len(nums)-1:
                     return result
                 else:
                     i+=1
+        print("outter",i)
         counter = 0
         i+=1
     print("result",result)
 
-# print(findMaxConsecutiveOnes([1,1,0,1,1,1]))
-print(findMaxConsecutiveOnes([1,0]))
+print(findMaxConsecutiveOnes([1,1,0,1,1,1]))
+# print(findMaxConsecutiveOnes([1,0]))
 
 
 # class Solution:
