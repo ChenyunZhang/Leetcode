@@ -12,4 +12,34 @@ class DoublyLinkedList {
         this.tail = null
         this.length = 0
     }
+
+    push(val){
+        const newNode = new Node(val)
+        if(this.length === 0){
+            this.head = newNode
+            this.tail = newNode
+        }else {
+            this.tail.next = newNode
+            newNode.prev = this.tail
+            this.tail = newNode
+        }
+        this.length++
+        return this;
+    }
+
+    pop(){
+        if(!this.head) return undefined
+        const poppedNode = this.tail
+        if(this.length === 1){
+            this.head = null
+            this.tail = null
+        }else{
+            this.tail = popedNode.prev
+            this.tail.next = null
+            poppedNode.prev = null
+        }
+        this.length--
+        return poppedNode
+    }
+    
 }
