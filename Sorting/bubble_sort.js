@@ -19,13 +19,13 @@
 
 
 // var sortArrayByParity = function(A) {
-        let noSwap = true
+        // let noSwap = true
 //     for(let i=A.length-1; i>=0;i--){
 //         for(let j=i-1;j>=0;j--){
 //             if(A[i]%2===0 && A[j]%2!==0){
 //             //    ! important swap value in js
 //                 [A[i],A[j]] = [A[j],A[i]]
-                    noSwap = false
+                //     noSwap = false
 //                }
 //         }
 //     }
@@ -35,3 +35,23 @@
 
 // to optimize the solution, use a flag
 
+
+
+function bubbleSort(arr) {
+        let noSwap = true
+        for(let i=arr.length-1;i>=0;i--){
+                for(let j=i-1;j>=0;j--){
+                if(arr[i]<arr[j]){
+                        [arr[i],arr[j]]=[arr[j],arr[i]]
+                        noSwap = false
+                }
+                }
+        }
+        console.log(arr)
+        if(noSwap){
+                return arr
+        }
+    }
+
+console.log(bubbleSort([-2,4,6,8,122,-5,-9,2,3,-1,3]))
+    
