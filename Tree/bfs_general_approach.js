@@ -66,11 +66,18 @@ class BinarySearchTree {
         return false;
     }
 
-
     BFS(){
+        let node = this.root
         const data = []
         const queue= []
-
+        queue.push(this.root)
+        while(queue.length){
+            node = queue.shift()
+            data.push(node)
+            if(node.left)queue.push(node.left)
+            if(node.right) queue.push(node.right)
+        }
+        return data
     }
 }
 
@@ -83,5 +90,4 @@ tree.insert(3);
 tree.insert(8);
 tree.insert(20);
 tree.BFS();
-    
 
