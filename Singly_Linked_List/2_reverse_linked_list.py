@@ -20,18 +20,7 @@ class Solution:
 
         return prev
 
-#1. create dummy, dummy.next = None
-#2. starting from node.val = 1
-#3. dummy,next, head.next, head = head, dummy.next, head.next
-#4. dummy -> 1 -< NULL
-#5 iteration head = 2, dummy.next = 1
-
-
-
-#1. store the head.next to nex
-#2. break and point the node to the prev
-#3. move prev to the head position, prev = head
-#4. move the head to the nex point, head = nex
+ 
 
 # recursively
     def reverseList(self, head: ListNode) -> ListNode:
