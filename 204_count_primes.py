@@ -1,4 +1,4 @@
-# Question: https://leetcode.com/problems/count-primes/
+# https://leetcode.com/problems/count-primes/
 class Solution:
     def countPrimes(self, n: int) -> int:
         if n < 2:
