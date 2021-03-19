@@ -16,5 +16,5 @@ class Solution {
         return res
     }
 }
-// two pointers approach 
+// two pointers approach
 // time complexity O(n), space complexity O(1)
