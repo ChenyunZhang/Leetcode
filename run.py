@@ -1,17 +1,17 @@
-from prettytable import PrettyTable
-from turtle import Turtle, Screen
-from prettytable import MSWORD_FRIENDLY
+# from prettytable import PrettyTable
+# from turtle import Turtle, Screen
+# from prettytable import MSWORD_FRIENDLY
 
-table = PrettyTable()
-table.add_column("Fruit",["banana","apple","orange"])
-table.add_column("Location",["New York","California","China"])
-table.add_column("Name",["Chenyun","Jade","Nunny"])
-table.add_row(["banana","apple","aas"])
-table.align = "r"
-table.valign = "t"
-# table.border = False
-table.set_style(MSWORD_FRIENDLY)
-print(table)
+# table = PrettyTable()
+# table.add_column("Fruit",["banana","apple","orange"])
+# table.add_column("Location",["New York","California","China"])
+# table.add_column("Name",["Chenyun","Jade","Nunny"])
+# table.add_row(["banana","apple","aas"])
+# table.align = "r"
+# table.valign = "t"
+# # table.border = False
+# table.set_style(MSWORD_FRIENDLY)
+# print(table)
 
 # timmy = Turtle()
 # print(timmy)
@@ -24,3 +24,12 @@ print(table)
 # timmy.bk(200)
 # print(my_screen.canvheight)
 # my_screen.exitonclick()
+
+
+
+print(printName("Nunny"))
+
+def printName(name):
+    return name
+
+print(3.round(2))
