@@ -1,0 +1,16 @@
+git init
+git add .
+git commit -m
+
+git log (check the record)
+git reset --hard 3618b7d (go back the previous version)
+git reflog (reverse the go back, go to the curret version)
+git reset -- hard 89a91b2
+
+example:
+git log
+89a91b2 js interview questions (Chenyun Zhang, 9 hours ago)
+3618b7d closure (Chenyun Zhang, 2 days ago)
+d6df6ed practice js interview (Chenyun Zhang, 2 days ago)
+
+
