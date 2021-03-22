@@ -1,7 +1,7 @@
 git init
 git add .
 git commit -m
-
+ssssss
 git log (check the record)
 git reset --hard 3618b7d (go back the previous version)
 git reflog (reverse the go back, go to the curret version)
