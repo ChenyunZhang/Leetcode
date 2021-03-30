@@ -10,3 +10,4 @@ class Solution:
                 nums[count],nums[i]=nums[i],nums[count]
                 count+=1
         return nums
+

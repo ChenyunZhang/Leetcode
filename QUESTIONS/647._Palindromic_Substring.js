@@ -2,6 +2,11 @@
  * @param {string} s
  * @return {number}
  */
+
+// first approach 
+// Time Complexity O(n^3)
+// Space Complexit O(1)
+
  var countSubstrings = function(s) {
     let counter = 0, i = 0, j=0, final = 0
        while(++counter<=s.length){
@@ -25,3 +30,6 @@ const checkPalindrone = s =>{
            }
     return true
 }
+
+
+// Second Approach Dynammic Programming
