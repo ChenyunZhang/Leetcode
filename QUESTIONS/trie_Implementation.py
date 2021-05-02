@@ -15,6 +15,7 @@ class Trie:
         for letter in word:
             if letter not in curr_node:
                 return False
+            print(curr_node)
             curr_node = curr_node[letter]
         return "*" in curr_node
 
@@ -23,4 +24,4 @@ words = ["wait","word","shop","shopper"]
 for word in words:
     trie.add_word(word)
 
-print(trie.does_word_exist("wait"))
+print(trie.does_word_exist("shop"))
