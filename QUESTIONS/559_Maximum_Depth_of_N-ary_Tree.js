@@ -1,12 +1,11 @@
-var maxDepth = function(root) {
-    if(!root) return 0
+var maxDepth = function (root) {
+    if (!root) return 0
     queue = [root]
     final = 0
-    while(queue.length){
-        let len = queue.length
-        for(let i=0;i<len;i++){
+    while (queue.length) {
+        for (let i = 0; i < queue.length; i++) {
             let node = queue.shift()
-            for(let i of node.children){
+            for (let i of node.children) {
                 queue.push(i)
             }
         }
@@ -14,3 +13,7 @@ var maxDepth = function(root) {
     }
     return final
 };
+
+const f = n => n <= 1 ? 1 : n * f(n - 1);
+let g = f(4)
+console.log(g)
